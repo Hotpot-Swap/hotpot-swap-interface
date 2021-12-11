@@ -1796,10 +1796,10 @@
     tiny-warning "^1.0.0"
     toformat "^2.0.0"
 
-"@hotpot-swap/core-sdk@1.0.0-canary.23":
-  version "1.0.0-canary.23"
-  resolved "https://registry.yarnpkg.com/@hotpot-swap/core-sdk/-/core-sdk-1.0.0-canary.23.tgz#b4b56142e8cd6f4c3d037fb3dd908db76e151b82"
-  integrity sha512-i1oGcIV3yhP5Wi42fubG4yyyO6fd/jNgwBsJ51ZMH8CxgW3bCnsRyK/FYgTfFxNOXhYdqntqQybJqoTJBTDVgA==
+"@hotpot-swap/core-sdk@1.0.0-canary.24":
+  version "1.0.0-canary.24"
+  resolved "https://registry.yarnpkg.com/@hotpot-swap/core-sdk/-/core-sdk-1.0.0-canary.24.tgz#8af6b5a987d39d93261df92f811d6b6cbf73c2fe"
+  integrity sha512-TVfkE92xOlEV00EUlBrNT8ey/LkslU7vehTB7js00c5a6+9HeAc4rV6XXzuZrWxecMS4q1/4ti0y6NT0AOUPGw==
   dependencies:
     "@ethersproject/address" "^5.4.0"
     "@ethersproject/bignumber" "^5.4.0"
@@ -1812,10 +1812,10 @@
     tiny-warning "^1.0.0"
     toformat "^2.0.0"
 
-"@hotpot-swap/core@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@hotpot-swap/core/-/core-0.0.1.tgz#b4eea96cc38078ac6d9ad393c90ba62e41f2ca91"
-  integrity sha512-ejRiZntJWZqaCkKQqYIhhpQ1I9PfdkO/bTiFDs+VgwR5QZmKD7GZWrVZACLU/5sBRP7Uq6aJTqPlrhL8SCjauA==
+"@hotpot-swap/core@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@hotpot-swap/core/-/core-0.0.2.tgz#bf425b04108e2d707987bdc59002f20f81208408"
+  integrity sha512-/Rk32kOcCrzf/dCXZwtmQbBHzKMW1Fe644TqYgPCR5mYK+kuM7tgv+g9MHL1NTb36wLv9qfiBjt8qYE5lUIc9g==
 
 "@hotpot-swap/limit-order-sdk@1.0.0-canary.12":
   version "1.0.0-canary.12"
@@ -1833,10 +1833,10 @@
     eip-712 "^0.4.0"
     isomorphic-unfetch "^3.0.0"
 
-"@hotpot-swap/sdk@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@hotpot-swap/sdk/-/sdk-0.0.1.tgz#d24b2ada8b85ad77982e1c16dbcc06598c7c387b"
-  integrity sha512-FC/x43Wn6MtlJ6HDKFGxb05adFbnP4A2RJTm/XSNaA4Li32y4qwMQ+bKc06QIbC2iOu7yqPTfvuCMxPYL1NyVg==
+"@hotpot-swap/sdk@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@hotpot-swap/sdk/-/sdk-0.0.2.tgz#a6ffecd5718e9eabbeac5acee112a1549f55c1a4"
+  integrity sha512-DxeE3JJqwd2wix/4B5H1AYtQM6VsriJoDwrf7CHNRdAChTIPOjSBEgwv60O845ClYBtKgQlm+kZlQirelaHw/g==
   dependencies:
     big.js "^6.1.0"
     decimal.js-light "^2.5.0"
@@ -2908,9 +2908,9 @@
   dependencies:
     "@sushiswap/default-token-list" "^11.3.0"
 
-"@hotpot-swap/limit-order-sdk@1.0.0-canary.8":
+"@sushiswap/limit-order-sdk@1.0.0-canary.8":
   version "1.0.0-canary.8"
-  resolved "https://registry.yarnpkg.com/@hotpot-swap/limit-order-sdk/-/limit-order-sdk-1.0.0-canary.8.tgz#f89c57577e5394358ef2bc6fa61c9e8ed6cb689a"
+  resolved "https://registry.yarnpkg.com/@sushiswap/limit-order-sdk/-/limit-order-sdk-1.0.0-canary.8.tgz#f89c57577e5394358ef2bc6fa61c9e8ed6cb689a"
   integrity sha512-tC6cU78wQZOSemQK8L/FVIvB67X4TsdebUdRAUuEm/XC9H0ldEMa0V7S+0+hpkna1q2WXt47TSDY8kN4vJdq/A==
   dependencies:
     "@ethersproject/abi" "^5.4.0"
