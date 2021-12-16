@@ -108,26 +108,7 @@ export default function Remove() {
     routerContract?.address
   )
 
-  const [approval, approveCallback] = useApproveCallback(parsedAmounts[Field.LIQUIDITY], routerContract?.address)
-
-  async function onAttemptToApprove() {
-    if (!pairContract || !pair || !library || !deadline) throw new Error('missing dependencies')
-    const liquidityAmount = parsedAmounts[Field.LIQUIDITY]
-    if (!liquidityAmount) throw new Error('missing liquidity amount')
-
-    if (chainId !== ChainId.HARMONY && gatherPermitSignature) {
-      try {
-        await gatherPermitSignature()
-      } catch (error) {
-        // try to approve if gatherPermitSignature failed for any reason other than the user rejecting it
-        if (error?.code !== 4001) {
-          await approveCallback()
-        }
-      }
-    } else {
-      await approveCallback()
-    }
-  }
+  const [approvalLQ, approveLQCallback] = useApproveCallback(parsedAmounts[Field.LIQUIDITY], routerContract?.address)
 
   // wrapped onUserInput to clear signatures
   const onUserInput = useCallback(
@@ -175,8 +156,8 @@ export default function Remove() {
     if (!tokenA || !tokenB) throw new Error('could not wrap')
 
     let methodNames: string[], args: Array<string | string[] | number | boolean>
-    // we have approval, use normal remove liquidity
-    if (approval === ApprovalState.APPROVED) {
+    // we have approvalLQ, use normal remove liquidity
+    if (approvalLQ === ApprovalState.APPROVED) {
       // removeLiquidityETH
       if (oneCurrencyIsETH) {
         methodNames = ['removeLiquidityETH', 'removeLiquidityETHSupportingFeeOnTransferTokens']
@@ -239,9 +220,8 @@ export default function Remove() {
         ]
       }
     } else {
-      throw new Error('Attempting to confirm without approval or a signature. Please contact support.')
+      throw new Error('Attempting to confirm without approvalLQ or a signature. Please contact support.')
     }
-
     const safeGasEstimates: (BigNumber | undefined)[] = await Promise.all(
       methodNames.map((methodName) =>
         routerContract.estimateGas[methodName](...args)
@@ -364,7 +344,7 @@ export default function Remove() {
         <Button
           color="gradient"
           size="lg"
-          disabled={!(approval === ApprovalState.APPROVED || signatureData !== null)}
+          disabled={!(approvalLQ === ApprovalState.APPROVED || signatureData !== null)}
           onClick={onRemove}
         >
           {i18n._(t`Confirm`)}
@@ -554,13 +534,13 @@ export default function Remove() {
                 ) : (
                   <div className="grid grid-cols-2 gap-4">
                     <ButtonConfirmed
-                      onClick={onAttemptToApprove}
-                      confirmed={approval === ApprovalState.APPROVED || signatureData !== null}
-                      disabled={approval !== ApprovalState.NOT_APPROVED || signatureData !== null}
+                      onClick={approveLQCallback}
+                      confirmed={approvalLQ === ApprovalState.APPROVED || signatureData !== null}
+                      disabled={approvalLQ !== ApprovalState.NOT_APPROVED || signatureData !== null}
                     >
-                      {approval === ApprovalState.PENDING ? (
+                      {approvalLQ === ApprovalState.PENDING ? (
                         <Dots>{i18n._(t`Approving`)}</Dots>
-                      ) : approval === ApprovalState.APPROVED || signatureData !== null ? (
+                      ) : approvalLQ === ApprovalState.APPROVED || signatureData !== null ? (
                         i18n._(t`Approved`)
                       ) : (
                         i18n._(t`Approve`)
@@ -570,7 +550,7 @@ export default function Remove() {
                       onClick={() => {
                         setShowConfirm(true)
                       }}
-                      disabled={!isValid || (signatureData === null && approval !== ApprovalState.APPROVED)}
+                      disabled={!isValid || (signatureData === null && approvalLQ !== ApprovalState.APPROVED)}
                       error={!isValid && !!parsedAmounts[Field.CURRENCY_A] && !!parsedAmounts[Field.CURRENCY_B]}
                     >
                       {error || i18n._(t`Confirm Withdrawal`)}
