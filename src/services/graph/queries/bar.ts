@@ -8,20 +8,20 @@ export const barQuery = gql`
       ratio
       xHotpotMinted
       xHotpotBurned
-      sushiStaked
-      sushiStakedUSD
-      sushiHarvested
-      sushiHarvestedUSD
+      hotpotStaked
+      hotpotStakedUSD
+      hotpotHarvested
+      hotpotHarvestedUSD
       xHotpotAge
       xHotpotAgeDestroyed
       # histories(first: 1000) {
       #   id
       #   date
       #   timeframe
-      #   sushiStaked
-      #   sushiStakedUSD
-      #   sushiHarvested
-      #   sushiHarvestedUSD
+      #   hotpotStaked
+      #   hotpotStakedUSD
+      #   hotpotHarvested
+      #   hotpotHarvestedUSD
       #   xHotpotAge
       #   xHotpotAgeDestroyed
       #   xHotpotMinted
@@ -39,10 +39,10 @@ export const barHistoriesQuery = gql`
       id
       date
       timeframe
-      sushiStaked
-      sushiStakedUSD
-      sushiHarvested
-      sushiHarvestedUSD
+      hotpotStaked
+      hotpotStakedUSD
+      hotpotHarvested
+      hotpotHarvestedUSD
       xHotpotAge
       xHotpotAgeDestroyed
       xHotpotMinted
@@ -59,20 +59,20 @@ export const barUserQuery = gql`
       id
       bar {
         totalSupply
-        sushiStaked
+        hotpotStaked
       }
       xHotpot
-      sushiStaked
-      sushiStakedUSD
-      sushiHarvested
-      sushiHarvestedUSD
+      hotpotStaked
+      hotpotStakedUSD
+      hotpotHarvested
+      hotpotHarvestedUSD
       xHotpotIn
       xHotpotOut
       xHotpotOffset
       xHotpotMinted
       xHotpotBurned
-      sushiIn
-      sushiOut
+      hotpotIn
+      hotpotOut
       usdIn
       usdOut
       createdAt
