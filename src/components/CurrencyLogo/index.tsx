@@ -146,7 +146,15 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({
     }
   }, [currency, uriLocations])
 
-  return <Logo width={size} height={size} alt={currency?.symbol} className={className} {...rest} />
+  return (
+    <Logo
+      width={size}
+      height={size}
+      alt={currency?.chainId != 4 && currency?.symbol == 'SUSHI' ? 'HOTPOT' : currency?.symbol}
+      className={className}
+      {...rest}
+    />
+  )
 }
 
 export default CurrencyLogo

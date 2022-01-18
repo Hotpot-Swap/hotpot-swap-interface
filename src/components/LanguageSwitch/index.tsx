@@ -10,23 +10,10 @@ import cookieCutter from 'cookie-cutter'
 
 const LANG_TO_COUNTRY = {
   en: 'English',
-  de: 'Deutsch',
-  fr: 'Français',
-  it: 'Italiano',
-  ro: 'Română',
-  ru: 'Русский',
   vi: 'Tiếng Việt',
-  zh_CN: '简体中文',
-  zh_TW: '繁體中文',
-  ko: '한국어',
-  ja: '日本語',
-  fa: 'فارسی',
-  pt_BR: 'Português',
-  hi: 'हिन्दी',
-  es: 'Español',
-  tr: 'Türkçe',
-  el: 'ελληνικά',
 }
+
+const LOCALES_TO_COUNTRY = ['en', 'vi']
 
 export default function LangSwitcher() {
   const { locale, locales, asPath } = useRouter()
@@ -62,7 +49,7 @@ export default function LangSwitcher() {
           >
             <Menu.Items className="absolute right-0 w-[max-content] mt-2 origin-top-right divide-y divide-dark-600 rounded shadow-lg bg-dark-800 ring-1 ring-black ring-opacity-5 focus:outline-none">
               <div className="p-2">
-                {locales.map((locale) => {
+                {LOCALES_TO_COUNTRY.map((locale) => {
                   return (
                     <Menu.Item key={locale}>
                       {({ active }) => (

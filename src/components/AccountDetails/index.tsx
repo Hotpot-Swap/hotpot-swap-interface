@@ -53,7 +53,7 @@ const AccountDetails: FC<AccountDetailsProps> = ({
   openOptions,
 }) => {
   const { i18n } = useLingui()
-  const { chainId, account, connector } = useActiveWeb3React()
+  const { chainId, account, connector, deactivate } = useActiveWeb3React()
   const dispatch = useDispatch<AppDispatch>()
 
   function formatConnectorName() {
@@ -113,14 +113,7 @@ const AccountDetails: FC<AccountDetailsProps> = ({
                 connector.constructor.name !== 'WalletLinkConnector' &&
                 connector.constructor.name !== 'BscConnector' &&
                 connector.constructor.name !== 'KeystoneConnector' && (
-                  <Button
-                    variant="outlined"
-                    color="gray"
-                    size="xs"
-                    onClick={() => {
-                      ;(connector as any).close()
-                    }}
-                  >
+                  <Button variant="outlined" color="gray" size="xs" onClick={deactivate}>
                     {i18n._(t`Disconnect`)}
                   </Button>
                 )}

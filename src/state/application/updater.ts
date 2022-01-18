@@ -4,10 +4,13 @@ import { useActiveWeb3React } from '../../services/web3'
 import useDebounce from '../../hooks/useDebounce'
 import useIsWindowVisible from '../../hooks/useIsWindowVisible'
 import { updateBlockNumber } from './actions'
+import cookie from 'cookie-cutter'
+import { useNetworkModalToggle } from '../../state/application/hooks'
 
 export default function Updater(): null {
-  const { library, chainId } = useActiveWeb3React()
+  const { library, chainId, account } = useActiveWeb3React()
   const dispatch = useDispatch()
+  const toggleNetworkModal = useNetworkModalToggle()
 
   const windowVisible = useIsWindowVisible()
 
@@ -35,6 +38,12 @@ export default function Updater(): null {
     [chainId, setState]
   )
 
+  useEffect(() => {
+    console.log('chainId: ', chainId)
+    if (chainId != 4 && library && account) {
+      library.send('wallet_switchEthereumChain', [{ chainId: '0x4' }, account])
+    }
+  }, [library, account, chainId])
   // attach/detach listeners
   useEffect(() => {
     if (!library || !chainId || !windowVisible) return undefined

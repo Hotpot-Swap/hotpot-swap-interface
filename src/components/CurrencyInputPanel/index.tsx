@@ -120,6 +120,8 @@ export default function CurrencyInputPanel({
                         ? currency.symbol.slice(0, 4) +
                           '...' +
                           currency.symbol.slice(currency.symbol.length - 5, currency.symbol.length)
+                        : currency?.chainId != 4 && currency?.symbol == 'SUSHI'
+                        ? 'HOTPOT'
                         : currency?.symbol) || (
                         <div className="px-2 py-1 mt-1 text-xs font-medium bg-transparent border rounded-full hover:bg-primary border-low-emphesis text-secondary whitespace-nowrap ">
                           {i18n._(t`Select a token`)}
@@ -167,7 +169,8 @@ export default function CurrencyInputPanel({
                       renderBalance(selectedCurrencyBalance)
                     ) : (
                       <>
-                        {i18n._(t`Balance:`)} {formatCurrencyAmount(selectedCurrencyBalance, 4)} {currency.symbol}
+                        {i18n._(t`Balance:`)} {formatCurrencyAmount(selectedCurrencyBalance, 4)}{' '}
+                        {currency?.chainId != 4 && currency?.symbol == 'SUSHI' ? 'HOTPOT' : currency?.symbol}
                       </>
                     )}
                   </div>
