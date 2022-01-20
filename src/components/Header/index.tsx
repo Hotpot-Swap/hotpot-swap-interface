@@ -131,7 +131,7 @@ function AppBar(): JSX.Element {
                                   symbol: 'HOTPOT',
                                   decimals: 18,
                                   image:
-                                    'https://raw.githubusercontent.com/sushiswap/logos/main/network/ethereum/0x6B3595068778DD592e39A122f4f5a5cF09C90fE2.jpg',
+                                    'https://raw.githubusercontent.com/Hotpot-Swap/hotpot-swap-interface/master/public/android-chrome-128x128.png',
                                 },
                               }
                               if (library && library.provider.isMetaMask && library.provider.request) {
