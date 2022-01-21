@@ -54,11 +54,13 @@ import TIMELOCK_ABI from '../constants/abis/timelock.json'
 import UNI_FACTORY_ABI from '../constants/abis/uniswap-v2-factory.json'
 import WETH9_ABI from '../constants/abis/weth.json'
 import ZENKO_ABI from '../constants/abis/zenko.json'
+import HOTPOT_FARMING_ABI from '../constants/abis/hotpot-farming.json'
 import { getContract } from '../functions/contract'
 import { useActiveWeb3React } from '../services/web3'
 import { useMemo } from 'react'
 
 const UNI_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
+const HOTPOT_FARMING_ADDRESS = '0x36C55e146aF82DbD06E0bFccF0AdFbedE02EC7d7'
 
 export function useEIP2612Contract(tokenAddress?: string): Contract | null {
   return useContract(tokenAddress, EIP_2612_ABI, false)
@@ -218,4 +220,8 @@ export function useInariContract(withSignerIfPossible?: boolean): Contract | nul
 
 export function useZenkoContract(withSignerIfPossible?: boolean): Contract | null {
   return useContract('0xa8f676c49f91655ab3b7c3ea2b73bb3088b2bc1f', ZENKO_ABI, withSignerIfPossible)
+}
+
+export function useHotpotFarmingContract(): Contract | null {
+  return useContract(HOTPOT_FARMING_ADDRESS, HOTPOT_FARMING_ABI, false)
 }
