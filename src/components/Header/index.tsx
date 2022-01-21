@@ -86,7 +86,7 @@ function AppBar(): JSX.Element {
                                     symbol: 'XHOTPOT',
                                     decimals: 18,
                                     image:
-                                      'https://raw.githubusercontent.com/sushiswap/logos/main/network/ethereum/0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272.jpg',
+                                      'https://raw.githubusercontent.com/Hotpot-Swap/hotpot-swap-interface/master/public/android-chrome-128x128.png',
                                   },
                                 }
                                 library.provider

@@ -114,7 +114,8 @@ export const portis = new PortisConnector({
 export const walletlink = new WalletLinkConnector({
   url: RPC[ChainId.ETHEREUM],
   appName: 'HotpotSwap',
-  appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png',
+  appLogoUrl:
+    'https://raw.githubusercontent.com/Hotpot-Swap/hotpot-swap-interface/master/public/android-chrome-256x256.png',
 })
 
 // mainnet only

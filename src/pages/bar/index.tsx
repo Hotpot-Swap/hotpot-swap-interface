@@ -54,7 +54,7 @@ const fetcher = (query) => request('https://api.thegraph.com/subgraphs/name/matt
 export default function Stake() {
   const { i18n } = useLingui()
   const { account } = useActiveWeb3React()
-  const sushiBalance = useTokenBalance(account ?? undefined, HOTPOT[ChainId.ETHEREUM])
+  const sushiBalance = useTokenBalance(account ?? undefined, HOTPOT[ChainId.RINKEBY])
   const xHotpotBalance = useTokenBalance(account ?? undefined, XHOTPOT)
 
   const { enter, leave } = useHotpotBar()
@@ -74,7 +74,7 @@ export default function Stake() {
 
   const parsedAmount = usingBalance ? balance : tryParseAmount(input, balance?.currency)
 
-  const [approvalState, approve] = useApproveCallback(parsedAmount, BAR_ADDRESS[ChainId.ETHEREUM])
+  const [approvalState, approve] = useApproveCallback(parsedAmount, BAR_ADDRESS[ChainId.RINKEBY])
 
   const handleInput = (v: string) => {
     if (v.length <= INPUT_CHAR_LIMIT) {
@@ -133,22 +133,22 @@ export default function Stake() {
     }
   }
 
-  const block1d = useBlock({ daysAgo: 1, chainId: ChainId.ETHEREUM })
+  const block1d = useBlock({ daysAgo: 1, chainId: ChainId.RINKEBY })
 
-  const exchange = useFactory({ chainId: ChainId.ETHEREUM })
+  const exchange = useFactory({ chainId: ChainId.RINKEBY })
 
   const exchange1d = useFactory({
-    chainId: ChainId.ETHEREUM,
+    chainId: ChainId.RINKEBY,
     variables: {
       block: block1d,
     },
     shouldFetch: !!block1d,
   })
 
-  const ethPrice = useNativePrice({ chainId: ChainId.ETHEREUM })
+  const ethPrice = useNativePrice({ chainId: ChainId.RINKEBY })
 
   const xHotpot = useTokens({
-    chainId: ChainId.ETHEREUM,
+    chainId: ChainId.RINKEBY,
     variables: { where: { id: XHOTPOT.address.toLowerCase() } },
   })?.[0]
 

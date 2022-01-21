@@ -234,8 +234,8 @@ export const XHOTPOT_CALL = new Token(
 export const WBTC = new Token(ChainId.ETHEREUM, '0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599', 8, 'WBTC', 'Wrapped BTC')
 
 export const XHOTPOT = new Token(
-  ChainId.ETHEREUM,
-  '0x8798249c2E607446EfB7Ad49eC89dD1865Ff4272',
+  ChainId.RINKEBY,
+  '0x94555E53B802672029A285e5B9122aEA4C739bA2',
   18,
   'xHOTPOT',
   'HotpotBar'
