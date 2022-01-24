@@ -14,13 +14,13 @@ export default function TransactionFailedModal({ isOpen, onDismiss }: Transactio
   const { i18n } = useLingui()
 
   return (
-    <Modal isOpen={isOpen} onDismiss={onDismiss} padding={28}>
-      <div className=" h-60">
+    <Modal isOpen={isOpen} onDismiss={onDismiss} padding={15}>
+      <div className=" h-200">
         <div className="flex justify-end">
           <CloseIcon onClick={onDismiss} />
         </div>
         <div className="flex justify-center">
-          <Image src={'/transaction-rejected.png'} width="96px" height="96px" alt="transaction rejected" />
+          <Image src={'/transaction-rejected.svg'} width="96px" height="96px" alt="transaction rejected" />
         </div>
         <div className="flex items-baseline justify-center mt-3 text-3xl flex-nowrap">
           <p className="text-high-emphesis">Uh Oh!&nbsp;</p>

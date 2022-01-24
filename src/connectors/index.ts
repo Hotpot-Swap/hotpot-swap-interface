@@ -125,3 +125,7 @@ export const torus = new TorusConnector({
 
 // binance only
 export const binance = new BscConnector({ supportedChainIds: [56] })
+
+export const networkSupport = new InjectedConnector({
+  supportedChainIds: [4],
+})

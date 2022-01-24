@@ -51,6 +51,10 @@
     "@gnosis.pm/safe-apps-web3-react": "^0.6.0",
     "@headlessui/react": "^1.4.0",
     "@heroicons/react": "^1.0.4",
+    "@hotpot-swap/core": "^0.0.3",
+    "@hotpot-swap/core-sdk": "1.0.0-canary.25",
+    "@hotpot-swap/limit-order-sdk": "1.0.0-canary.12",
+    "@hotpot-swap/sdk": "^0.0.3",
     "@keystonehq/keystone-connector": "^0.9.0",
     "@lingui/cli": "^3.10.2",
     "@lingui/core": "^3.10.4",
@@ -67,10 +71,6 @@
     "@sushiswap/chainlink-whitelist": "0.2.5",
     "@sushiswap/default-token-list": "18.10.0",
     "@sushiswap/limit-order-pair-list": "0.2.2",
-    "@hotpot-swap/sdk": "^0.0.3",
-    "@hotpot-swap/core": "^0.0.3",
-    "@hotpot-swap/limit-order-sdk": "1.0.0-canary.12",
-    "@hotpot-swap/core-sdk": "1.0.0-canary.25",
     "@sushiswap/sushi-data": "^1.0.24",
     "@tailwindcss/jit": "^0.1.18",
     "@testing-library/jest-dom": "^5.14.1",
@@ -176,5 +176,10 @@
     "not ie 11",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "moment": "^2.29.1",
+    "react-tabs": "^3.2.3",
+    "react-tooltip": "^4.2.21"
+  }
 }

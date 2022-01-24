@@ -56,13 +56,13 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Pool`)}
                         </a>
                       </NavLink>
-                      {chainId && featureEnabled(Feature.STAKING, chainId) && (
-                        <NavLink href={'/stake'}>
+                      {chainId && featureEnabled(Feature.LIQUIDITY_MINING, chainId) && (
+                        <NavLink href={'/farm'}>
                           <a
-                            id={`stake-nav-link`}
+                            id={`farm-nav-link`}
                             className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
                           >
-                            {i18n._(t`Stake`)}
+                            {i18n._(t`Farm`)}
                           </a>
                         </NavLink>
                       )}

@@ -2,24 +2,9 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
     "name": "ClaimOldHotpot",
     "type": "event"
@@ -27,18 +12,8 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "duration",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "duration", "type": "uint256" }
     ],
     "name": "DurationUpdated",
     "type": "event"
@@ -46,24 +21,9 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
     "name": "EmergencyWithdraw",
     "type": "event"
@@ -71,24 +31,9 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "contract IERC20",
-        "name": "gift",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": true, "internalType": "contract IERC20", "name": "gift", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
     "name": "GiftAdded",
     "type": "event"
@@ -96,48 +41,13 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "allocPoint",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "stakingToken",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "contract IERC20",
-        "name": "gift",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "duration",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "rewardDistribution",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "scale",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "allocPoint", "type": "uint256" },
+      { "indexed": true, "internalType": "address", "name": "stakingToken", "type": "address" },
+      { "indexed": true, "internalType": "contract IERC20", "name": "gift", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "duration", "type": "uint256" },
+      { "indexed": false, "internalType": "address", "name": "rewardDistribution", "type": "address" },
+      { "indexed": false, "internalType": "uint256", "name": "scale", "type": "uint256" }
     ],
     "name": "LogFarmAddition",
     "type": "event"
@@ -145,18 +55,8 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "allocPoint",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "allocPoint", "type": "uint256" }
     ],
     "name": "LogSetFarm",
     "type": "event"
@@ -164,42 +64,12 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "lastRewardBlock",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "lpSupply",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "accHotpotPerShare",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "rewardPerTokenStored",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "lastUpdateTime",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "lastRewardBlock", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "lpSupply", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "accHotpotPerShare", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "rewardPerTokenStored", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "lastUpdateTime", "type": "uint256" }
     ],
     "name": "LogUpdateFarm",
     "type": "event"
@@ -207,18 +77,8 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "rewardDistribution",
-        "type": "address"
-      }
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": true, "internalType": "address", "name": "rewardDistribution", "type": "address" }
     ],
     "name": "RewardDistributionChanged",
     "type": "event"
@@ -226,24 +86,9 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "indexed": true,
-        "internalType": "bytes32",
-        "name": "previousAdminRole",
-        "type": "bytes32"
-      },
-      {
-        "indexed": true,
-        "internalType": "bytes32",
-        "name": "newAdminRole",
-        "type": "bytes32"
-      }
+      { "indexed": true, "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "indexed": true, "internalType": "bytes32", "name": "previousAdminRole", "type": "bytes32" },
+      { "indexed": true, "internalType": "bytes32", "name": "newAdminRole", "type": "bytes32" }
     ],
     "name": "RoleAdminChanged",
     "type": "event"
@@ -251,24 +96,9 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "sender",
-        "type": "address"
-      }
+      { "indexed": true, "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "indexed": true, "internalType": "address", "name": "account", "type": "address" },
+      { "indexed": true, "internalType": "address", "name": "sender", "type": "address" }
     ],
     "name": "RoleGranted",
     "type": "event"
@@ -276,24 +106,9 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "sender",
-        "type": "address"
-      }
+      { "indexed": true, "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "indexed": true, "internalType": "address", "name": "account", "type": "address" },
+      { "indexed": true, "internalType": "address", "name": "sender", "type": "address" }
     ],
     "name": "RoleRevoked",
     "type": "event"
@@ -301,18 +116,8 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "scale",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "scale", "type": "uint256" }
     ],
     "name": "ScaleUpdated",
     "type": "event"
@@ -320,36 +125,11 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "hotpotAmount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "rewardAmount",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "hotpotAmount", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "rewardAmount", "type": "uint256" }
     ],
     "name": "Staked",
     "type": "event"
@@ -357,36 +137,11 @@
   {
     "anonymous": false,
     "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "hotpotAmount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "rewardAmount",
-        "type": "uint256"
-      }
+      { "indexed": true, "internalType": "address", "name": "user", "type": "address" },
+      { "indexed": true, "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "amount", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "hotpotAmount", "type": "uint256" },
+      { "indexed": false, "internalType": "uint256", "name": "rewardAmount", "type": "uint256" }
     ],
     "name": "Withdrawn",
     "type": "event"
@@ -394,53 +149,19 @@
   {
     "inputs": [],
     "name": "DEFAULT_ADMIN_ROLE",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_allocPoint",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_stakingToken",
-        "type": "address"
-      },
-      {
-        "internalType": "contract IERC20",
-        "name": "_gift",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_duration",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_rewardDistribution",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_scale",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "_withUpdate",
-        "type": "bool"
-      }
+      { "internalType": "uint256", "name": "_allocPoint", "type": "uint256" },
+      { "internalType": "address", "name": "_stakingToken", "type": "address" },
+      { "internalType": "contract IERC20", "name": "_gift", "type": "address" },
+      { "internalType": "uint256", "name": "_duration", "type": "uint256" },
+      { "internalType": "address", "name": "_rewardDistribution", "type": "address" },
+      { "internalType": "uint256", "name": "_scale", "type": "uint256" },
+      { "internalType": "bool", "name": "_withUpdate", "type": "bool" }
     ],
     "name": "addFarm",
     "outputs": [],
@@ -448,13 +169,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_devaddr",
-        "type": "address"
-      }
-    ],
+    "inputs": [{ "internalType": "address", "name": "_devaddr", "type": "address" }],
     "name": "dev",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -463,99 +178,33 @@
   {
     "inputs": [],
     "name": "devaddr",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "fid", "type": "uint256" }],
     "name": "emergencyWithdraw",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "name": "farmInfo",
     "outputs": [
-      {
-        "internalType": "address",
-        "name": "stakingToken",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "allocPoint",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "lastRewardBlock",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "accHotpotPerShare",
-        "type": "uint256"
-      },
-      {
-        "internalType": "contract IERC20",
-        "name": "gift",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "scale",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "duration",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "rewardDistribution",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "periodFinish",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "rewardRate",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "lastUpdateTime",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "rewardPerTokenStored",
-        "type": "uint256"
-      }
+      { "internalType": "address", "name": "stakingToken", "type": "address" },
+      { "internalType": "uint256", "name": "allocPoint", "type": "uint256" },
+      { "internalType": "uint256", "name": "lastRewardBlock", "type": "uint256" },
+      { "internalType": "uint256", "name": "accHotpotPerShare", "type": "uint256" },
+      { "internalType": "contract IERC20", "name": "gift", "type": "address" },
+      { "internalType": "uint256", "name": "scale", "type": "uint256" },
+      { "internalType": "uint256", "name": "duration", "type": "uint256" },
+      { "internalType": "address", "name": "rewardDistribution", "type": "address" },
+      { "internalType": "uint256", "name": "periodFinish", "type": "uint256" },
+      { "internalType": "uint256", "name": "rewardRate", "type": "uint256" },
+      { "internalType": "uint256", "name": "lastUpdateTime", "type": "uint256" },
+      { "internalType": "uint256", "name": "rewardPerTokenStored", "type": "uint256" }
     ],
     "stateMutability": "view",
     "type": "function"
@@ -563,90 +212,38 @@
   {
     "inputs": [],
     "name": "farmLength",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "farms",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "farms", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      }
-    ],
+    "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }],
     "name": "getRoleAdmin",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "uint256",
-        "name": "index",
-        "type": "uint256"
-      }
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "uint256", "name": "index", "type": "uint256" }
     ],
     "name": "getRoleMember",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      }
-    ],
+    "inputs": [{ "internalType": "bytes32", "name": "role", "type": "bytes32" }],
     "name": "getRoleMemberCount",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
     ],
     "name": "grantRole",
     "outputs": [],
@@ -655,76 +252,34 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
     ],
     "name": "hasRole",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "hotpot",
-    "outputs": [
-      {
-        "internalType": "contract HotpotToken",
-        "name": "",
-        "type": "address"
-      }
-    ],
+    "outputs": [{ "internalType": "contract HotpotToken", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "hotpotPerBlock",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "contract HotpotToken",
-        "name": "_hotpot",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_devAddr",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_hotpotPerBlock",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_startBlock",
-        "type": "uint256"
-      }
+      { "internalType": "contract HotpotToken", "name": "_hotpot", "type": "address" },
+      { "internalType": "address", "name": "_devAddr", "type": "address" },
+      { "internalType": "uint256", "name": "_hotpotPerBlock", "type": "uint256" },
+      { "internalType": "uint256", "name": "_startBlock", "type": "uint256" }
     ],
     "name": "initialize",
     "outputs": [],
@@ -732,39 +287,15 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "fid", "type": "uint256" }],
     "name": "lastTimeRewardApplicable",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
+  { "inputs": [], "name": "massUpdateFarms", "outputs": [], "stateMutability": "nonpayable", "type": "function" },
   {
-    "inputs": [],
-    "name": "massUpdateFarms",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_fid",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "_fid", "type": "uint256" }],
     "name": "migrate",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -773,28 +304,14 @@
   {
     "inputs": [],
     "name": "migrator",
-    "outputs": [
-      {
-        "internalType": "contract IMigratorFarm",
-        "name": "",
-        "type": "address"
-      }
-    ],
+    "outputs": [{ "internalType": "contract IMigratorFarm", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "reward",
-        "type": "uint256"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "uint256", "name": "reward", "type": "uint256" }
     ],
     "name": "notifyRewardAmount",
     "outputs": [],
@@ -803,64 +320,28 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "address", "name": "account", "type": "address" }
     ],
     "name": "pendingGift",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "pending",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "pending", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "address", "name": "account", "type": "address" }
     ],
     "name": "pendingHotpot",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "pending",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "pending", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
     ],
     "name": "renounceRole",
     "outputs": [],
@@ -869,16 +350,8 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "role",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
+      { "internalType": "bytes32", "name": "role", "type": "bytes32" },
+      { "internalType": "address", "name": "account", "type": "address" }
     ],
     "name": "revokeRole",
     "outputs": [],
@@ -886,36 +359,16 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "fid", "type": "uint256" }],
     "name": "rewardPerToken",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "duration",
-        "type": "uint256"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "uint256", "name": "duration", "type": "uint256" }
     ],
     "name": "setDuration",
     "outputs": [],
@@ -924,21 +377,9 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256[]",
-        "name": "fids",
-        "type": "uint256[]"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "allocPoints",
-        "type": "uint256[]"
-      },
-      {
-        "internalType": "bool",
-        "name": "withUpdate",
-        "type": "bool"
-      }
+      { "internalType": "uint256[]", "name": "fids", "type": "uint256[]" },
+      { "internalType": "uint256[]", "name": "allocPoints", "type": "uint256[]" },
+      { "internalType": "bool", "name": "withUpdate", "type": "bool" }
     ],
     "name": "setFarmAllocations",
     "outputs": [],
@@ -946,13 +387,7 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "contract IMigratorFarm",
-        "name": "_migrator",
-        "type": "address"
-      }
-    ],
+    "inputs": [{ "internalType": "contract IMigratorFarm", "name": "_migrator", "type": "address" }],
     "name": "setMigrator",
     "outputs": [],
     "stateMutability": "nonpayable",
@@ -960,16 +395,8 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "rewardDistribution",
-        "type": "address"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "address", "name": "rewardDistribution", "type": "address" }
     ],
     "name": "setRewardDistribution",
     "outputs": [],
@@ -978,16 +405,8 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "scale",
-        "type": "uint256"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "uint256", "name": "scale", "type": "uint256" }
     ],
     "name": "setScale",
     "outputs": [],
@@ -996,16 +415,8 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
     "name": "stake",
     "outputs": [],
@@ -1013,75 +424,37 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "name": "stakingTokens",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
-    ],
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "startBlock",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "totalAllocPoint",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [],
     "name": "totalHotpotStaked",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "address", "name": "account", "type": "address" }
     ],
     "name": "updateFarm",
     "outputs": [],
@@ -1090,55 +463,23 @@
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
-      }
+      { "internalType": "uint256", "name": "", "type": "uint256" },
+      { "internalType": "address", "name": "", "type": "address" }
     ],
     "name": "userInfo",
     "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "rewardDebt",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "userRewardPerTokenPaid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "rewards",
-        "type": "uint256"
-      }
+      { "internalType": "uint256", "name": "amount", "type": "uint256" },
+      { "internalType": "uint256", "name": "rewardDebt", "type": "uint256" },
+      { "internalType": "uint256", "name": "userRewardPerTokenPaid", "type": "uint256" },
+      { "internalType": "uint256", "name": "rewards", "type": "uint256" }
     ],
     "stateMutability": "view",
     "type": "function"
   },
   {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "fid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "amount",
-        "type": "uint256"
-      }
+      { "internalType": "uint256", "name": "fid", "type": "uint256" },
+      { "internalType": "uint256", "name": "amount", "type": "uint256" }
     ],
     "name": "withdraw",
     "outputs": [],

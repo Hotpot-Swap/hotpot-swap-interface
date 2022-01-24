@@ -40,41 +40,9 @@ const nextConfig = {
   reactStrictMode: true,
   async redirects() {
     return [
-      // {
-      //   source: '/',
-      //   destination: '/swap',
-      //   permanent: true,
-      // },
-
       {
-        source: '/zap',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/yield',
-        destination: '/farm',
-        permanent: true,
-      },
-      {
-        source: '/bento',
-        destination: '/bentobox',
-        permanent: true,
-      },
-      {
-        source: '/bento/kashi',
-        destination: '/lend',
-        permanent: true,
-      },
-      // Analytics
-      {
-        source: '/analytics',
-        destination: '/analytics/dashboard',
-        permanent: true,
-      },
-      {
-        source: '/portfolio',
-        destination: '/analytics/portfolio',
+        source: '/',
+        destination: '/swap',
         permanent: true,
       },
     ]
