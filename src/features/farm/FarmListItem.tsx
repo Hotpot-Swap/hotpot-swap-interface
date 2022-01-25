@@ -2,7 +2,7 @@ import { Disclosure } from '@headlessui/react'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import BigNumber from 'bignumber.js'
-import { formatEther } from 'ethers/lib/utils'
+import { formatEther, parseEther } from 'ethers/lib/utils'
 import moment from 'moment'
 import React, { useCallback, useEffect, useState } from 'react'
 import styled from 'styled-components'
@@ -227,11 +227,13 @@ const FarmListItem = ({ farm, farmLength }) => {
         .toNumber()
     }
     const tokenPriceUSD = 0
+    console.log('totalStakedForFarmToken: ', totalStakedForFarmToken)
+    console.log('userStake?.amount: ', userStake?.amount)
     const totalStakeForFarmToken =
       farm.type === FarmTypeEnum.TOKEN &&
-      new BigNumber(convertToNumber(totalStakedForFarmToken, farm.pair.token.decimals)).times(tokenPriceUSD).toNumber()
+      new BigNumber(convertToNumber(totalStakedForFarmToken, farm.pair.token.decimals)).toNumber()
     const yourStakeForFarmToken =
-      new BigNumber(convertToNumber(userStake?.amount, farm.pair.token.decimals)).times(tokenPriceUSD).toNumber() || 0
+      new BigNumber(convertToNumber(userStake?.amount, farm.pair.token.decimals)).toNumber() || 0
 
     let tokenFarmAPY = 0
 
@@ -397,15 +399,9 @@ const FarmListItem = ({ farm, farmLength }) => {
 
   const handleDeposit = async (val: number) => {
     setIsOpenDeposit(false)
-    console.log('val: ', val)
-    console.log(
-      'new BigNumber(val).times(new BigNumber(10).pow(18)).toString(): ',
-      new BigNumber(val).times(new BigNumber(10).pow(18)).toString()
-    )
-
     const estimate = farmingContractV2.estimateGas.stake
     const method = farmingContractV2.stake
-    const args = [farm.pid, new BigNumber(val).times(new BigNumber(10).pow(18)).toString()]
+    const args = [farm.pid, parseEther(val.toString())]
     await estimate(...args)
       .then((estimatedGasLimit) =>
         method(...args, {
@@ -580,8 +576,8 @@ const FarmListItem = ({ farm, farmLength }) => {
                   <TextTotal>{i18n._(t`Total Staked`)}</TextTotal>
                   <NumberTotal>
                     <NewTooltip
-                      dataTip={'$' + handleToFixedDataTip(dataTotalSkate, 2)}
-                      dataValue={'$' + handleAdvancedDecimal(toFixed(dataTotalSkate), 6)}
+                      dataTip={handleToFixedDataTip(dataTotalSkate, 2)}
+                      dataValue={handleAdvancedDecimal(toFixed(dataTotalSkate), 6)}
                     />
                   </NumberTotal>
                 </div>
@@ -687,23 +683,11 @@ const FarmListItem = ({ farm, farmLength }) => {
                   <TextStake>{i18n._(t`Your stake`)}</TextStake>
                   <CountStake>
                     <NewTooltip
-                      dataValue={'$' + handleAdvancedDecimal(hotpotardData(data.userStake), 10)}
-                      dataTip={` $${handleToFixedDataTip(hotpotardData(data.userStake), 10)}`}
+                      dataValue={handleAdvancedDecimal(hotpotardData(data.userStake), 10)}
+                      dataTip={` ${handleToFixedDataTip(hotpotardData(data.userStake), 10)}`}
                     />
                   </CountStake>
                 </div>
-                {farm.hotpotEarning && (
-                  <div className="flex justify-between py-1 items-center">
-                    <TextStake>{i18n._(t`HOTPOT reward ($)`)}</TextStake>
-                    <CountStake>
-                      {/* ${hotpotardData(data?.token0Reward?.toFixed(2))} */}
-                      <NewTooltip
-                        dataValue={'$' + handleAdvancedDecimal(hotpotardData(data?.hotpotReward), 10)}
-                        dataTip={` $${handleToFixedDataTip(hotpotardData(data?.hotpotReward), 10)}`}
-                      />
-                    </CountStake>
-                  </div>
-                )}
                 {farm.hotpotEarning && (
                   <div className="flex justify-between py-1 items-center">
                     <TextStake>{i18n._(t`HOTPOT reward `)}</TextStake>
@@ -803,7 +787,7 @@ const FarmListItem = ({ farm, farmLength }) => {
                     <div className="flex flex-row items-center btn-container">
                       <button
                         disabled={!farm.active}
-                        className={`btn-primary1 ${!farm.active && 'disable-btn'}`}
+                        className={`bg-gradient-to-r from-blue to-pink btn-primary1 ${!farm.active && 'disable-btn'}`}
                         onClick={handleOpenDeposit}
                       >
                         <div className="label">{i18n._(t`Deposit`)}</div>
@@ -831,7 +815,7 @@ const FarmListItem = ({ farm, farmLength }) => {
                         />
                       )}
                       <button
-                        className={`btn-primary1 ${
+                        className={`bg-gradient-to-r from-blue to-pink btn-primary1 ${
                           ((data.hotpotTokenReward === 0 && data.token0Reward === 0 && data.token1Reward === 0) ||
                             (!farm.isActive && data.checkClaim)) &&
                           'disable-btn'
@@ -864,7 +848,7 @@ const FarmListItem = ({ farm, farmLength }) => {
                     </div>
                     <div className="flex flex-row items-center btn-container mb-36">
                       <button
-                        className={`btn-primary1 ${
+                        className={`bg-gradient-to-r from-blue to-pink btn-primary1 ${
                           (data.userStake === 0 || (!farm.active && !data.checkClaim)) && 'disable-btn'
                         } `}
                         disabled={(!farm.active && !data.checkClaim) || data.userStake === 0}
@@ -924,7 +908,7 @@ const MouseoverTooltipNumber = styled(MouseoverTooltip)`
   }
 `
 const FarmItem = styled.div`
-  width: 100%;
+  width: 300px;
   margin-bottom: 40px;
 
   & .item-list {
@@ -965,7 +949,7 @@ const FarmItem = styled.div`
   & .item-total {
     display: flex;
     justify-content: space-between;
-    background: ${({ theme }) => theme.bgrLinear};
+    background: linear-gradient(89.89deg, #243329 0.15%, #1e2539 99.97%);
     padding: 27px 29px;
     border-radius: 20px 20px 0px 0px;
     @media screen and (max-width: 768px) {
@@ -1027,8 +1011,8 @@ const FarmItem = styled.div`
   }
 `
 const StatusCard = styled.p`
-  background: ${({ theme }) => theme.bgrActive};
-  color: ${({ theme }) => theme.textActive};
+  background: rgba(0, 116, 223, 0.2);
+  color: $rgb(0, 116, 223);
   border-radius: 30px;
   padding: 7px 15px;
   font-weight: 600;

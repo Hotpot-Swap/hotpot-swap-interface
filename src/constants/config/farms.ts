@@ -11,7 +11,7 @@ const farmsRinkeby = [
     endDate: 0,
     isActive: true,
     singleFarm: true,
-    standEarning: true,
+    hotpotEarning: true,
     lpTokenAddress: {
       decimals: 18,
       4: '0xAab270C629D885713602BC62B1c15D6e0e51F5A9',
@@ -40,13 +40,48 @@ const farmsRinkeby = [
     type: FarmTypeEnum.TOKEN,
   },
   // {
+  //   pid: 0,
+  //   network: 4,
+  //   startDate: 0,
+  //   endDate: 0,
+  //   isActive: true,
+  //   singleFarm: false,
+  //   hotpotEarning: true,
+  //   lpTokenAddress: {
+  //     decimals: 18,
+  //     4: '0xAab270C629D885713602BC62B1c15D6e0e51F5A9',
+  //   },
+
+  //   farmAddress: {
+  //     4: MASTER_CHEF_V2[4],
+  //   },
+  //   pair: {
+  //     id: '0xAab270C629D885713602BC62B1c15D6e0e51F5A9',
+  //     token: {
+  //       symbol: 'HOTPOT',
+  //       id: '0xAab270C629D885713602BC62B1c15D6e0e51F5A9',
+  //       decimals: 18,
+  //       earning: false,
+  //       // amountPerMonth: 20: unlimited token
+  //     },
+
+  //     quoteToken: {
+  //       symbol: 'HOTPOT',
+  //       id: '0xAab270C629D885713602BC62B1c15D6e0e51F5A9',
+  //       decimals: 18,
+  //       earning: false,
+  //     },
+  //   },
+  //   type: FarmTypeEnum.TOKEN,
+  // },
+  // {
   //   pid: 5,
   //   network: 4,
   //   startDate: 0,
   //   endDate: 0,
   //   isActive: true,
   //   singleFarm: false,
-  //   standEarning: true,
+  //   hotpotEarning: true,
   //   lpTokenAddress: {
   //     decimals: 18,
   //     4: '0xce58d81acc1f0ab34da92351d625c325b4947f4b',
@@ -85,7 +120,7 @@ const farmsRinkeby = [
   //   endDate: 0,
   //   isActive: true,
   //   singleFarm: false,
-  //   standEarning: true,
+  //   hotpotEarning: true,
   //   lpTokenAddress: {
   //     decimals: 18,
   //     4: '0x408235Af9Ac0dcbf07812AA7F7Aad40A5CDc3845',

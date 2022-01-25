@@ -101,7 +101,7 @@ export default function DoubleCurrencyLogo({
         {currency0 && (
           <Image
             className="rounded-full z-10"
-            src={'/icons/tokenstand_circle_logo.png'}
+            src={'/icons/icon-72x72.png'}
             alt={currency0.symbol}
             width="40px"
             height="40px"
@@ -111,21 +111,13 @@ export default function DoubleCurrencyLogo({
     )
   }
 
-  if (farmType === FarmTypeEnum.NFT) {
-    return (
-      <div>
-        <img src={'/icons/nft-logo.svg'} alt="" />
-      </div>
-    )
-  }
-
   return (
     <Wrapper sizeraw={size} margin={margin} space={space}>
       {currency0 &&
-        (currency0.symbol === 'STAND' ? (
+        (currency0.symbol === 'HOTPOT' ? (
           <Image
             className="rounded-full z-10"
-            src={'/icons/tokenstand_circle_logo.png'}
+            src={'/icons/icon-72x72.png'}
             alt={currency0.symbol}
             width="40px"
             height="40px"

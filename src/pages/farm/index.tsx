@@ -12,7 +12,6 @@ import FarmsList from '../../constants/config/farms'
 import { FarmTypeEnum } from '../../constants/farm-type'
 import FarmList from '../../features/farm/FarmList'
 import { useHotpotFarmingContract, useFarmingContractWeb3, useChainId } from '../../hooks/useContract'
-//import Layout from '../../layouts/DefaultLayout'
 import { useActiveWeb3React } from '../../services/web3'
 
 const WrapFarm = styled.div`
@@ -214,61 +213,60 @@ export default function Farm(): JSX.Element {
         <title>Farm | TokenStand</title>
         <meta name="description" content="Farm TOKENSTAND" />
       </Head>
-      <Container maxWidth="full" className="grid h-full mx-auto gap-9">
-        <div className="space-y-6">
-          <WrapFarm>
-            <TabsFarm
-              forceRenderTabPanel
-              selectedIndex={tabIndex}
-              onSelect={(index: number) => handleTabFarmChange(index)}
-              className="flex flex-col flex-grow"
-            >
-              <TabListFarm className="flex flex-shrink-0 rounded">
-                <Tab
-                  className="cursor-pointer select-none focus:outline-none"
-                  selectedClassName="text-high-emphesis selected"
-                >
-                  {i18n._(t`Active`)}
-                </Tab>
-                <Tab
-                  className="cursor-pointer select-none focus:outline-none"
-                  selectedClassName="text-high-emphesis selected"
-                >
-                  {i18n._(t`Ended`)}
-                </Tab>
-              </TabListFarm>
-              <TabPanel>
-                {tabIndex == 0 && (
-                  <>
-                    <TextFarm>
-                      {i18n._(t`In case you don’t see your stake, please check`)}{' '}
-                      <a href="#" onClick={() => setTabIndex(1)} className="subText">
-                        {i18n._(t`expired`)}
-                      </a>{' '}
-                      {i18n._(t`section`)}
-                    </TextFarm>
-                    <FarmList
-                      farms={getFarmsActive()}
-                      currentFarmType={currentFarmType}
-                      changeFarmType={handleChangeFarmType}
-                    />
-                  </>
-                )}
-              </TabPanel>
-              <TabPanel>
-                {tabIndex == 1 && (
+
+      <div className="space-y-6">
+        <WrapFarm>
+          <TabsFarm
+            forceRenderTabPanel
+            selectedIndex={tabIndex}
+            onSelect={(index: number) => handleTabFarmChange(index)}
+            className="flex flex-col flex-grow"
+          >
+            <TabListFarm className="flex flex-shrink-0 rounded">
+              <Tab
+                className="cursor-pointer select-none focus:outline-none"
+                selectedClassName="text-high-emphesis selected"
+              >
+                {i18n._(t`Active`)}
+              </Tab>
+              <Tab
+                className="cursor-pointer select-none focus:outline-none"
+                selectedClassName="text-high-emphesis selected"
+              >
+                {i18n._(t`Ended`)}
+              </Tab>
+            </TabListFarm>
+            <TabPanel>
+              {tabIndex == 0 && (
+                <>
+                  <TextFarm>
+                    {i18n._(t`In case you don’t see your stake, please check`)}{' '}
+                    <a href="#" onClick={() => setTabIndex(1)} className="subText">
+                      {i18n._(t`expired`)}
+                    </a>{' '}
+                    {i18n._(t`section`)}
+                  </TextFarm>
                   <FarmList
-                    farms={getFarmsInactive()}
+                    farms={getFarmsActive()}
                     currentFarmType={currentFarmType}
                     changeFarmType={handleChangeFarmType}
                   />
-                )}
-              </TabPanel>
-            </TabsFarm>
-          </WrapFarm>
-        </div>
-        {/* {account && <PopupNotice isOpen={isNotice} onDismiss={() => setIsNotice(false)} />} */}
-      </Container>
+                </>
+              )}
+            </TabPanel>
+            <TabPanel>
+              {tabIndex == 1 && (
+                <FarmList
+                  farms={getFarmsInactive()}
+                  currentFarmType={currentFarmType}
+                  changeFarmType={handleChangeFarmType}
+                />
+              )}
+            </TabPanel>
+          </TabsFarm>
+        </WrapFarm>
+      </div>
+      {/* {account && <PopupNotice isOpen={isNotice} onDismiss={() => setIsNotice(false)} />} */}
     </Container>
   )
 }

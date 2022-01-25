@@ -178,6 +178,7 @@
     "not op_mini all"
   ],
   "dependencies": {
+    "ethers": "^5.5.3",
     "moment": "^2.29.1",
     "react-tabs": "^3.2.3",
     "react-tooltip": "^4.2.21"

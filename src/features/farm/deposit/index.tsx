@@ -438,7 +438,7 @@ export default function Deposit({
               new BigNumber(countValue).gt(new BigNumber(userLpAmount)) ||
               approval === ApprovalState.PENDING
             }
-            className={`btn-primary1 ${
+            className={`bg-gradient-to-r from-blue to-pink btn-primary1 ${
               (Number(countValue) == 0 ||
                 Number(countValue) == null ||
                 new BigNumber(countValue).gt(new BigNumber(userLpAmount)) ||
